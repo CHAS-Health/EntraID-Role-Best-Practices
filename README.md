@@ -6,10 +6,10 @@ This is for determining the best practices and assigning least-privilege for all
 # Security Engineer - Tier 1
 ### Title: Security Engineer 1
 ### Tier: One
-Purpose: This role is the general analyst for the organization. They are in the trenches every day and frequently need to see deep into the logs to triage events. This role is going to be the least permissive Security Engineer position, but that role also comes with greater 		permissions overall than similar engineer positions.
+Purpose: This role is the general analyst for the organization. They are in the trenches every day and frequently need to see deep into the logs to triage events. 
+This role is going to be the least permissive Security Engineer position, but that role also comes with greater permissions overall than similar engineer positions.
 
 # Microsoft Entra ID Role Assignments
-
 
 ## Attack Payload author
 Users in this role can create attack payloads but not actually launch or schedule them. Attack payloads are then available to all administrators in the tenant who can use them to create a simulation.
@@ -20,7 +20,8 @@ Users in this role can create attack payloads but not actually launch or schedul
 
 	
 ## Authentication Administrator - Privileged
-This role allows users to reset authentication settings such as password, change MFA authentication type, clear saved authentication credentials, revoke sign-ins, and more. This role specifically prevents the admin from resetting admin authentication. 
+This role allows users to reset authentication settings such as password, change MFA authentication type, clear saved authentication credentials, revoke sign-ins, and more. 
+This role specifically prevents the admin from resetting admin authentication. 
 | Permission                                                               | Description                                        |
 | ------------------------------------------------------------------------ | -------------------------------------------------- |
 | microsoft.directory/users/authenticationMethods/create | Update authentication methods for users |
@@ -45,7 +46,9 @@ This role allows users to reset authentication settings such as password, change
 
 
 ## Message Center Reader
-Users in this role can monitor notifications and advisory health updates in Message center for their organization on configured services such as Exchange, Intune, and Microsoft Teams. Message Center Readers receive weekly email digests of posts, updates, and can share 		message center posts in Microsoft 365. In Microsoft Entra ID, users assigned to this role will only have read-only access on Microsoft Entra services such as users and groups. This role has no access to view, create, or manage support tickets.
+Users in this role can monitor notifications and advisory health updates in Message center for their organization on configured services such as Exchange, Intune, and Microsoft Teams. 
+Message Center Readers receive weekly email digests of posts, updates, and can share	message center posts in Microsoft 365. 
+In Microsoft Entra ID, users assigned to this role will only have read-only access on Microsoft Entra services such as users and groups. This role has no access to view, create, or manage support tickets.
 | Permission                                                               | Description                                        |
 | ------------------------------------------------------------------------ | -------------------------------------------------- |
 | microsoft.office365.messageCenter/messages/read | Read messages in Message Center in the Microsoft 365 admin center, excluding security messages |
@@ -53,7 +56,9 @@ Users in this role can monitor notifications and advisory health updates in Mess
 
 
 ## Security Reader - Privileged
-This is a privileged role. Users with this role have global read-only access on security-related feature, including all information in Microsoft 365 Defender portal, Microsoft Entra ID Protection, Privileged Identity Management, as well as the ability to read Microsoft 		Entra sign-in reports and audit logs, and in Microsoft Purview compliance portal. For more information about Office 365 permissions, see Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview compliance.
+This is a privileged role. Users with this role have global read-only access on security-related feature, including all information in Microsoft 365 Defender portal, Microsoft Entra ID Protection, Privileged Identity Management, 
+as well as the ability to read Microsoft. Entra sign-in reports and audit logs, and in Microsoft Purview compliance portal. 
+For more information about Office 365 permissions, see Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview compliance.
 | Permission                                                               | Description                                        |
 | ------------------------------------------------------------------------ | -------------------------------------------------- |
 | microsoft.directory/accessReviews/definitions/allProperties/read | Read all properties of access reviews of all reviewable resources in Microsoft Entra ID |
