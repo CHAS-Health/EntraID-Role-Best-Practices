@@ -16,8 +16,8 @@ Users in this role can create attack payloads but not actually launch or schedul
 	
 ## Authentication Administrator - Privileged
 This role allows users to reset authentication settings such as password, change MFA authentication type, clear saved authentication credentials, revoke sign-ins, and more. This role specifically prevents the admin from resetting admin authentication. 
-| Permission | Description |
-| --- | --- |
+| Permission                                                               | Description                                        |
+| ------------------------------------------------------------------------ | -------------------------------------------------- |
 | microsoft.directory/users/authenticationMethods/create | Update authentication methods for users |
 | microsoft.directory/users/authenticationMethods/delete | Delete authentication methods for users - Privileged |
 | microsoft.directory/users/authenticationMethods/standard/restrictedRead | Read standard properties of authentication methods that do not include personally identifiable information for users |
@@ -41,16 +41,16 @@ This role allows users to reset authentication settings such as password, change
 
 ## Message Center Reader
 Users in this role can monitor notifications and advisory health updates in Message center for their organization on configured services such as Exchange, Intune, and Microsoft Teams. Message Center Readers receive weekly email digests of posts, updates, and can share 		message center posts in Microsoft 365. In Microsoft Entra ID, users assigned to this role will only have read-only access on Microsoft Entra services such as users and groups. This role has no access to view, create, or manage support tickets.
-| Permission | Description |
-| --- | --- |
+| Permission                                                               | Description                                        |
+| ------------------------------------------------------------------------ | -------------------------------------------------- |
 | microsoft.office365.messageCenter/messages/read | Read messages in Message Center in the Microsoft 365 admin center, excluding security messages |
 | microsoft.office365.webPortal/allEntities/standard/read | Read basic properties on all resources in the Microsoft 365 admin center |
 
 
 ## Security Reader - Privileged
 This is a privileged role. Users with this role have global read-only access on security-related feature, including all information in Microsoft 365 Defender portal, Microsoft Entra ID Protection, Privileged Identity Management, as well as the ability to read Microsoft 		Entra sign-in reports and audit logs, and in Microsoft Purview compliance portal. For more information about Office 365 permissions, see Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview compliance.
-| Permission | Description |
-| --- | --- |
+| Permission                                                               | Description                                        |
+| ------------------------------------------------------------------------ | -------------------------------------------------- |
 | microsoft.directory/accessReviews/definitions/allProperties/read | Read all properties of access reviews of all reviewable resources in Microsoft Entra ID |
 | microsoft.directory/auditLogs/allProperties/read | Read all properties on audit logs, excluding custom security attributes audit logs |
 | microsoft.directory/authorizationPolicy/standard/read | Read standard properties of authorization policy |
@@ -87,8 +87,8 @@ This is a privileged role. Users with this role have global read-only access on 
 
 ## Service Support Administrator
 Users with this role can create and manage support requests with Microsoft for Azure and Microsoft 365 services, and view the service dashboard and message center in the Azure portal and Microsoft 365 admin center.
-| Permission | Description |
-| --- | --- |
+| Permission                                                               | Description                                        |
+| ------------------------------------------------------------------------ | -------------------------------------------------- |
 | microsoft.azure.serviceHealth/allEntities/allTasks | Read and configure Azure Service Health |
 | microsoft.azure.supportTickets/allEntities/allTasks | Create and manage Azure support tickets |
 | microsoft.office365.network/performance/allProperties/read | Read all network performance properties in the Microsoft 365 admin center |
