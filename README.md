@@ -2,7 +2,7 @@
 This is for determining the best practices and assigning least-privilege for all Entra ID Roles
 
 # Roles
-## Security Engineer - Tier 1
+## [Security Engineer - Tier 1](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/main/Security%20Engineer%20-%20Tier%201.md#security-engineer---tier-1)
 
 ## Security Engineer - Tier 2
 			
