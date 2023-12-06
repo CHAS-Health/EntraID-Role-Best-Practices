@@ -53,9 +53,7 @@ Users in this role can monitor notifications and advisory health updates in Mess
 
 
 ## Security Reader - Privileged
-This is a privileged role. Users with this role have global read-only access on security-related feature, including all information in Microsoft 365 Defender portal, Microsoft Entra ID Protection, Privileged Identity Management, 
-as well as the ability to read Microsoft. Entra sign-in reports and audit logs, and in Microsoft Purview compliance portal. 
-For more information about Office 365 permissions, see Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview compliance.
+This is a privileged role. Users with this role have global read-only access on security-related feature, including all information in Microsoft 365 Defender portal, Microsoft Entra ID Protection, Privileged Identity Management, as well as the ability to read Microsoft. Entra sign-in reports and audit logs, and in Microsoft Purview compliance portal. For more information about Office 365 permissions, see Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview compliance.
 
 | Permission | Description |
 | --- | --- |
