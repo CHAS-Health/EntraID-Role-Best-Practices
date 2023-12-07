@@ -7,7 +7,6 @@ Purpose: This role is the general analyst for the organization. They are in the 
 
 # Microsoft Entra ID Role Assignments
 
-
 ## Attack Payload author
 Users in this role can create attack payloads but not actually launch or schedule them. Attack payloads are then available to all administrators in the tenant who can use them to create a simulation.
 | Permission                                                               | Description                                        |
@@ -15,7 +14,7 @@ Users in this role can create attack payloads but not actually launch or schedul
 | microsoft.office365.protectionCenter/attackSimulator/payload/allProperties/allTasks | Create and manage attack payloads in Attack Simulator |
 | microsoft.office365.protectionCenter/attackSimulator/reports/allProperties/read | Create and manage attack payloads in Attack Simulator |
 
-	
+
 ## Authentication Administrator - Privileged
 This role allows users to reset authentication settings such as password, change MFA authentication type, clear saved authentication credentials, revoke sign-ins, and more. This role specifically prevents the admin from resetting admin authentication. 
 | Permission                                                               | Description                                        |
@@ -61,7 +60,6 @@ This is a privileged role. Users in this role can enable, disable, and delete de
 | microsoft.directory/signInReports/allProperties/read | Read all properties on sign-in reports, including privileged properties |
 | microsoft.azure.serviceHealth/allEntities/allTasks | Read and configure Azure Service Health |
 | microsoft.office365.serviceHealth/allEntities/allTasks | Read and configure Service Health in the Microsoft 365 admin center |
-
 
 
 ## Message Center Reader
@@ -121,5 +119,9 @@ Users with this role can create and manage support requests with Microsoft for A
 | microsoft.office365.supportTickets/allEntities/allTasks | Create and manage Microsoft 365 service requests |
 | microsoft.office365.webPortal/allEntities/standard/read | Read basic properties on all resources in the Microsoft 365 admin center |
 
+# Defender XDR Role-Based Access Control (RBAC)
+Defender XDR now has its own set of permissions which can be created and assigned to the Defender XDR suite of tools, with more on the way. It is best-practice to utilize Defender XDR RBAC for controlling Microsoft Defender XDR permissions to things like Defender ATP, Defender for Endpoint, Defender Cloud App Security, Defender for Identity, and more. This gives you the most granular control over these modules, and is far superior to the default Azure Entra ID Roles.
 
+[## Defender XDR RBAC - Tier 1](Defender XDR RBAC - Tier 1)
+This is a custom role that will need to be created. See the documentation [here](Defender XDR RBAC - Tier 1) for a full guide, or click the header. 
 			
