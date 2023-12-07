@@ -40,6 +40,29 @@ This role allows users to reset authentication settings such as password, change
 | microsoft.office365.supportTickets/allEntities/allTasks | Create and manage Microsoft 365 service requests |
 | microsoft.office365.webPortal/allEntities/standard/read | Read basic properties on all resources in the Microsoft 365 admin center |
 
+##Cloud Device Administrator
+This is a privileged role. Users in this role can enable, disable, and delete devices in Microsoft Entra ID and read Windows 10 BitLocker keys (if present) in the Azure portal. The role does not grant permissions to manage any other properties on the device.
+
+| Actions | Description |
+| --- | --- |
+| microsoft.directory/auditLogs/allProperties/read | Read all properties on audit logs, excluding custom security attributes audit logs |
+| microsoft.directory/authorizationPolicy/standard/read | Read standard properties of authorization policy |
+| microsoft.directory/bitlockerKeys/key/read | Read bitlocker metadata and key on devices |
+| microsoft.directory/deletedItems.devices/delete | Permanently delete devices, which can no longer be restored |
+| microsoft.directory/deletedItems.devices/restore | Restore soft deleted devices to original state |
+| microsoft.directory/devices/delete | Delete devices from Microsoft Entra ID |
+| microsoft.directory/devices/disable | Disable devices in Microsoft Entra ID |
+| microsoft.directory/devices/enable | Enable devices in Microsoft Entra ID |
+| microsoft.directory/deviceLocalCredentials/password/read | Read all properties of the backed up local administrator account credentials for Microsoft Entra joined devices, including the password |
+| microsoft.directory/deviceManagementPolicies/standard/read | Read standard properties on device management application policies |
+| microsoft.directory/deviceManagementPolicies/basic/update | Update basic properties on device management application policies |
+| microsoft.directory/deviceRegistrationPolicy/standard/read | Read standard properties on device registration policies |
+| microsoft.directory/deviceRegistrationPolicy/basic/update | Update basic properties on device registration policies |
+| microsoft.directory/signInReports/allProperties/read | Read all properties on sign-in reports, including privileged properties |
+| microsoft.azure.serviceHealth/allEntities/allTasks | Read and configure Azure Service Health |
+| microsoft.office365.serviceHealth/allEntities/allTasks | Read and configure Service Health in the Microsoft 365 admin center |
+
+
 
 ## Message Center Reader
 Users in this role can monitor notifications and advisory health updates in Message center for their organization on configured services such as Exchange, Intune, and Microsoft Teams. Message Center Readers receive weekly email digests of posts, updates, and can share 		message center posts in Microsoft 365. In Microsoft Entra ID, users assigned to this role will only have read-only access on Microsoft Entra services such as users and groups. This role has no access to view, create, or manage support tickets.
