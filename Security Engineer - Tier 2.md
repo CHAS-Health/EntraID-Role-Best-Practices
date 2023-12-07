@@ -99,43 +99,35 @@ Users in this role can monitor all notifications in the Message Center, includin
 | `microsoft.office365.messageCenter/securityMessages/read` | Read security messages in Message Center in the Microsoft 365 admin center
 | `microsoft.office365.webPortal/allEntities/standard/read` | Read basic properties on all resources in the Microsoft 365 admin center 
 
-## Security Reader - Privileged
-This is a privileged role. Users with this role have global read-only access on security-related feature, including all information in Microsoft 365 Defender portal, Microsoft Entra ID Protection, Privileged Identity Management, as well as the ability to read Microsoft Entra sign-in reports and audit logs, and in Microsoft Purview compliance portal. For more information about Office 365 permissions, see Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview compliance.
+## Security Operator - Privileged
+This is a privileged role. Users with this role can manage alerts and have global read-only access on security-related features, including all information in Microsoft 365 Defender portal, Microsoft Entra ID Protection, Privileged Identity Management and Microsoft Purview compliance portal. For more information about Office 365 permissions, see Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview compliance.
 
-| Permission | Description |
+| In | Can do |
 | --- | --- |
-| `microsoft.directory/accessReviews/definitions/allProperties/read` | Read all properties of access reviews of all reviewable resources in Microsoft Entra ID |
+| Microsoft 365 Defender portal | All permissions of the Security Reader role<br>View, investigate, and respond to security threats alerts<br>Manage security settings in Microsoft 365 Defender portal |
+| Identity Protection | All permissions of the Security Reader role<br>Perform all Identity Protection operations except for configuring or changing risk-based policies, resetting passwords, and configuring alert e-mails. |
+| Privileged Identity Management | All permissions of the Security Reader role |
+| Microsoft Purview compliance portal | All permissions of the Security Reader role<br>View, investigate, and respond to security alerts |
+| Microsoft Defender for Endpoint | All permissions of the Security Reader role<br>View, investigate, and respond to security alerts<br>When you turn on role-based access control in Microsoft Defender for Endpoint, users with read-only permissions such as the Security Reader role lose access until they are assigned a Microsoft Defender for Endpoint role. |
+| Intune | All permissions of the Security Reader role |
+| Microsoft Defender for Cloud Apps | All permissions of the Security Reader role<br>View, investigate, and respond to security alerts |
+| Microsoft 365 service health | View the health of Microsoft 365 services |
+
+| Actions | Description |
+| --- | --- |
 | `microsoft.directory/auditLogs/allProperties/read` | Read all properties on audit logs, excluding custom security attributes audit logs |
 | `microsoft.directory/authorizationPolicy/standard/read` | Read standard properties of authorization policy |
-| `microsoft.directory/bitlockerKeys/key/read` | Read bitlocker metadata and key on devices - Privileged |
-| `microsoft.directory/deviceLocalCredentials/standard/read` | Read all properties of the backed up local administrator account credentials for Microsoft Entra joined devices, except the password |
-| `microsoft.directory/domains/federationConfiguration/standard/read` | Read standard properties of federation configuration for domains |
-| `microsoft.directory/entitlementManagement/allProperties/read` | Read all properties in Microsoft Entra entitlement management |
-| `microsoft.directory/identityProtection/allProperties/read` | Read all resources in Microsoft Entra ID Protection |
-| `microsoft.directory/namedLocations/standard/read` | Read basic properties of custom rules that define network locations |
-| `microsoft.directory/policies/standard/read` | Read basic properties on policies |
-| `microsoft.directory/policies/owners/read` | Read owners of policies |
-| `microsoft.directory/policies/policyAppliedTo/read` | Read policies.policyAppliedTo property |
-| `microsoft.directory/conditionalAccessPolicies/standard/read` | Read Conditional Access for policies |
-| `microsoft.directory/conditionalAccessPolicies/owners/read` | Read the owners of Conditional Access policies |
-| `microsoft.directory/conditionalAccessPolicies/policyAppliedTo/read` | Read the "applied to" property for Conditional Access policies |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/standard/read` | Read basic properties of cross tenant sync policy templates for multi-tenant organization |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/standard/read` | Read basic properties of cross tenant access policy templates for multi-tenant organization |
-| `microsoft.directory/multiTenantOrganization/joinRequest/standard/read` | Read properties of a multi-tenant organization join request |
-| `microsoft.directory/multiTenantOrganization/standard/read` | Read basic properties of a multi-tenant organization |
-| `microsoft.directory/multiTenantOrganization/tenants/organizationDetails/read` | Read organization details of a tenant participating in a multi-tenant organization |
-| `microsoft.directory/multiTenantOrganization/tenants/standard/read` | Read basic properties of a tenant participating in a multi-tenant organization |
+| `microsoft.directory/cloudAppSecurity/allProperties/allTasks` | Create and delete all resources, and read and update standard properties in Microsoft Defender for Cloud Apps |
+| `microsoft.directory/identityProtection/allProperties/allTasks` | Create and delete all resources, and read and update standard properties in Microsoft Entra ID Protection |
 | `microsoft.directory/privilegedIdentityManagement/allProperties/read` | Read all resources in Privileged Identity Management |
 | `microsoft.directory/provisioningLogs/allProperties/read` | Read all properties of provisioning logs |
 | `microsoft.directory/signInReports/allProperties/read` | Read all properties on sign-in reports, including privileged properties |
-| `microsoft.azure.serviceHealth/allEntities/allTasks` | Read and configure Azure Service Health |
-| `microsoft.networkAccess/allEntities/allProperties/read` | Read all aspects of Microsoft Entra Network Access |
-| `microsoft.office365.protectionCenter/allEntities/standard/read` | Read standard properties of all resources in the Security and Compliance centers |
-| `microsoft.office365.protectionCenter/attackSimulator/payload/allProperties/read` | Read all properties of attack payloads in Attack Simulator |
-| `microsoft.office365.protectionCenter/attackSimulator/reports/allProperties/read` | Read reports of attack simulation, responses, and associated training |
-| `microsoft.office365.protectionCenter/attackSimulator/simulation/allProperties/read` | Read all properties of attack simulation templates in Attack Simulator |
-| `microsoft.office365.serviceHealth/allEntities/allTasks` | Read and configure Service Health in the Microsoft 365 admin center |
-| `microsoft.office365.webPortal/allEntities/standard/read` | Read basic properties on all resources in the Microsoft 365 admin center |
+| `microsoft.azure.advancedThreatProtection/allEntities/allTasks` | Manage all aspects of Azure Advanced Threat Protection |
+| `microsoft.azure.supportTickets/allEntities/allTasks` | Create and manage Azure support tickets |
+| `microsoft.intune/allEntities/read` | Read all resources in Microsoft Intune |
+| `microsoft.office365.securityComplianceCenter/allEntities/allTasks` | Create and delete all resources, and read and update standard properties in the Office 365 Security & Compliance Center |
+| `microsoft.office365.supportTickets/allEntities/allTasks` | Create and manage Microsoft 365 service requests |
+| `microsoft.windows.defenderAdvancedThreatProtection/allEntities/allTasks` | Manage all aspects of Microsoft Defender for Endpoint |
 
 
 ## Service Support Administrator
