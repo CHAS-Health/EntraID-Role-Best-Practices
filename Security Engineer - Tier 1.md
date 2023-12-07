@@ -5,6 +5,9 @@
 ### Tier: One
 Purpose: This role is the general analyst for the organization. They are in the trenches every day and frequently need to see deep into the logs to triage events. This role is going to be the least permissive Security Engineer position, but that role also comes with greater 		permissions overall than similar engineer positions.
 
+# Defender XDR Role-Based Access Control (RBAC)
+Defender XDR now has its own set of permissions which can be created and assigned to the Defender XDR suite of tools, with more on the way. It is best-practice to utilize Defender XDR RBAC for controlling Microsoft Defender XDR permissions to things like Defender ATP, Defender for Endpoint, Defender Cloud App Security, Defender for Identity, and more. This gives you the most granular control over these modules, and is far superior to the default Azure Entra ID Roles.
+
 # Microsoft Entra ID Role Assignments
 
 ## Attack Payload author
@@ -119,8 +122,7 @@ Users with this role can create and manage support requests with Microsoft for A
 | microsoft.office365.supportTickets/allEntities/allTasks | Create and manage Microsoft 365 service requests |
 | microsoft.office365.webPortal/allEntities/standard/read | Read basic properties on all resources in the Microsoft 365 admin center |
 
-# Defender XDR Role-Based Access Control (RBAC)
-Defender XDR now has its own set of permissions which can be created and assigned to the Defender XDR suite of tools, with more on the way. It is best-practice to utilize Defender XDR RBAC for controlling Microsoft Defender XDR permissions to things like Defender ATP, Defender for Endpoint, Defender Cloud App Security, Defender for Identity, and more. This gives you the most granular control over these modules, and is far superior to the default Azure Entra ID Roles.
+
 
 [## Defender XDR RBAC - Tier 1](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/a11c2c8f4079604b3362d288171f8a2f51f71852/Defender%20XDR%20RBAC%20-%20Tier%201.md)
 This is a custom role that will need to be created. See the documentation [here](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/a11c2c8f4079604b3362d288171f8a2f51f71852/Defender%20XDR%20RBAC%20-%20Tier%201.md) for a full guide, or click the header. 
