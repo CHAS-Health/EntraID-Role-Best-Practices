@@ -8,10 +8,10 @@ Purpose: This role is specifically intended to be used by the level two engineer
 # Defender XDR Role-Based Access Control (RBAC)
 Defender XDR now has its own set of permissions which can be created and assigned to the Defender XDR suite of tools, with more on the way. It is best-practice to utilize Defender XDR RBAC for controlling Microsoft Defender XDR permissions to things like Defender ATP, Defender for Endpoint, Defender Cloud App Security, Defender for Identity, and more. This gives you the most granular control over these modules, and is far superior to the default Azure Entra ID Roles.
 
-## [ Defender XDR RBAC - Tier 1](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/a11c2c8f4079604b3362d288171f8a2f51f71852/Defender%20XDR%20RBAC%20-%20Tier%201.md)
+## [ Defender XDR RBAC - Tier 1](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/f92de5984b4caab6ff8fb9098a64376f6eeab243/Defender%20XDR%20RBAC%20-%20Tier%202.md)
 
 
-This is a custom role that will need to be created. See the documentation [here](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/a11c2c8f4079604b3362d288171f8a2f51f71852/Defender%20XDR%20RBAC%20-%20Tier%201.md) for a full guide, or click the header. 
+This is a custom role that will need to be created. See the documentation [here](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/f92de5984b4caab6ff8fb9098a64376f6eeab243/Defender%20XDR%20RBAC%20-%20Tier%202.md) for a full guide, or click the header. 
 
 
 # Microsoft Entra ID Role Assignments
