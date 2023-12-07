@@ -14,6 +14,14 @@ Defender XDR now has its own set of permissions which can be created and assigne
 This is a custom role that will need to be created. See the documentation [here](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/450ce6398ac84948c0db2e6ab5ede2129627c64c/Defender%20XDR%20RBAC%20-%20Tier%201.md) for a full guide, or click the header. 
 
 # Microsoft Entra ID Role Assignments
+* Attack Payload Author
+* Authentication Administrator 
+* Cloud Device Administrator
+* Message Center Reader
+* Security Reader
+* Service Support Administrator
+
+# Permission Details
 
 ## Attack Payload author
 Users in this role can create attack payloads but not actually launch or schedule them. Attack payloads are then available to all administrators in the tenant who can use them to create a simulation.
