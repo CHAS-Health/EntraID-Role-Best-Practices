@@ -49,7 +49,7 @@ This role allows users to reset authentication settings such as password, change
 | microsoft.office365.supportTickets/allEntities/allTasks | Create and manage Microsoft 365 service requests |
 | microsoft.office365.webPortal/allEntities/standard/read | Read basic properties on all resources in the Microsoft 365 admin center |
 
-##Cloud Device Administrator
+## Cloud Device Administrator
 This is a privileged role. Users in this role can enable, disable, and delete devices in Microsoft Entra ID and read Windows 10 BitLocker keys (if present) in the Azure portal. The role does not grant permissions to manage any other properties on the device.
 
 | Permission | Description |
