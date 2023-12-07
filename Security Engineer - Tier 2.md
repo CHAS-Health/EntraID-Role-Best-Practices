@@ -7,7 +7,7 @@ Purpose: This role is specifically intended to be used by the level two engineer
 
 # Microsoft Entra ID Role Assignments
 
-#Attack Simulation Administrator
+## Attack Simulation Administrator
 Users in this role can create and manage all aspects of attack simulation creation, launch/scheduling of a simulation, and the review of simulation results. Members of this role have this access for all simulations in the tenant.
 
 | Permission | Description |
@@ -45,7 +45,6 @@ This role allows users to reset authentication settings such as password, change
 This is a privileged role. Users in this role can enable, disable, and delete devices in Microsoft Entra ID and read Windows 10 BitLocker keys (if present) in the Azure portal. The role does not grant permissions to manage any other properties on the device.
 
 ##Intune Administrator
-
 This is a privileged role. Users with this role have global permissions within Microsoft Intune Online, when the service is present. Additionally, this role contains the ability to manage users and devices in order to associate policy, as well as create and manage groups. For more information, see Role-based administration control (RBAC) with Microsoft Intune.
 
 This role can create and manage all security groups. However, Intune Administrator does not have admin rights over Office groups. That means the admin cannot update owners or memberships of all Office groups in the organization. However, he/she can manage the Office group that he creates which comes as a part of his/her end-user privileges. So, any Office group (not security group) that he/she creates should be counted against his/her quota of 250.
@@ -143,12 +142,12 @@ This is a privileged role. Users with this role have global read-only access on 
 Users with this role can create and manage support requests with Microsoft for Azure and Microsoft 365 services, and view the service dashboard and message center in the Azure portal and Microsoft 365 admin center.
 | Permission | Description |
 | --- | --- |
-| microsoft.azure.serviceHealth/allEntities/allTasks | Read and configure Azure Service Health |
-| microsoft.azure.supportTickets/allEntities/allTasks | Create and manage Azure support tickets |
-| microsoft.office365.network/performance/allProperties/read | Read all network performance properties in the Microsoft 365 admin center |
-| microsoft.office365.serviceHealth/allEntities/allTasks | Read and configure Service Health in the Microsoft 365 admin center |
-| microsoft.office365.supportTickets/allEntities/allTasks | Create and manage Microsoft 365 service requests |
-| microsoft.office365.webPortal/allEntities/standard/read | Read basic properties on all resources in the Microsoft 365 admin center |
+| `microsoft.azure.serviceHealth/allEntities/allTasks` | Read and configure Azure Service Health |
+| `microsoft.azure.supportTickets/allEntities/allTasks` | Create and manage Azure support tickets |
+| `microsoft.office365.network/performance/allProperties/read` | Read all network performance properties in the Microsoft 365 admin center |
+| `microsoft.office365.serviceHealth/allEntities/allTasks` | Read and configure Service Health in the Microsoft 365 admin center |
+| `microsoft.office365.supportTickets/allEntities/allTasks` | Create and manage Microsoft 365 service requests |
+| `microsoft.office365.webPortal/allEntities/standard/read` | Read basic properties on all resources in the Microsoft 365 admin center |
 
 
 			
