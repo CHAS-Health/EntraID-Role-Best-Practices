@@ -10,6 +10,7 @@ Defender XDR now has its own set of permissions which can be created and assigne
 
 ## [ Defender XDR RBAC - Tier 1](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/a11c2c8f4079604b3362d288171f8a2f51f71852/Defender%20XDR%20RBAC%20-%20Tier%201.md)
 
+
 This is a custom role that will need to be created. See the documentation [here](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/a11c2c8f4079604b3362d288171f8a2f51f71852/Defender%20XDR%20RBAC%20-%20Tier%201.md) for a full guide, or click the header. 
 
 # Microsoft Entra ID Role Assignments
