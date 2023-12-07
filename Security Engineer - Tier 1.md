@@ -101,8 +101,6 @@ This is a privileged role. Users with this role have global read-only access on 
 | `microsoft.directory/conditionalAccessPolicies/standard/read` | Read Conditional Access for policies |
 | `microsoft.directory/conditionalAccessPolicies/owners/read` | Read the owners of Conditional Access policies |
 | `microsoft.directory/conditionalAccessPolicies/policyAppliedTo/read` | Read the "applied to" property for Conditional Access policies |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/standard/read` | Read basic properties of cross tenant sync policy templates for multi-tenant organization |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/standard/read` | Read basic properties of cross tenant access policy templates for multi-tenant organization |
 | `microsoft.directory/multiTenantOrganization/joinRequest/standard/read` | Read properties of a multi-tenant organization join request |
 | `microsoft.directory/multiTenantOrganization/standard/read` | Read basic properties of a multi-tenant organization |
 | `microsoft.directory/multiTenantOrganization/tenants/organizationDetails/read` | Read organization details of a tenant participating in a multi-tenant organization |
@@ -118,6 +116,11 @@ This is a privileged role. Users with this role have global read-only access on 
 | `microsoft.office365.protectionCenter/attackSimulator/simulation/allProperties/read` | Read all properties of attack simulation templates in Attack Simulator |
 | `microsoft.office365.serviceHealth/allEntities/allTasks` | Read and configure Service Health in the Microsoft 365 admin center |
 | `microsoft.office365.webPortal/allEntities/standard/read` | Read basic properties on all resources in the Microsoft 365 admin center |
+
+| Permission | Description |
+| --- | --- |
+| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/standard/read` | Read basic properties of cross tenant sync policy templates for multi-tenant organization |
+| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/standard/read` | Read basic properties of cross tenant access policy templates for multi-tenant organization |
 
 
 ## Service Support Administrator
