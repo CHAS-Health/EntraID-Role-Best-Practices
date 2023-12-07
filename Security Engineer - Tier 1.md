@@ -1,8 +1,8 @@
 #### [Back to main page](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/tree/main#entraid-role-best-practices)
 
 # Security Engineer - Tier 1
-#### Title: Security Engineer 1
-#### Tier: One
+### Title: Security Engineer 1
+### Tier: One
 Purpose: This role is the general analyst for the organization. They are in the trenches every day and frequently need to see deep into the logs to triage events. This role is going to be the least permissive Security Engineer position, but that role also comes with greater permissions overall than similar engineer positions.
 
 # Defender XDR Role-Based Access Control (RBAC)
