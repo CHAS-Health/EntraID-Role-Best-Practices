@@ -8,7 +8,7 @@ This is for determining the best practices and assigning least-privilege for all
 * [Defender XDR - Tier 3]()
 
 ## Defender Cloud App Security Roles
-
+* [Defender Cloud App Security RBAC](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/f982994eb5ade5155249304148a0dcc199288ada/Defender%20Cloud%20App%20Security%20RBAC.md)
 
 ## Entra ID Roles
 * [Security Engineer - Tier 1](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/e20dcf7b0eee8d6b48dc0704cc92dcfb005807cb/Security%20Engineer%20-%20Tier%201.md#)
