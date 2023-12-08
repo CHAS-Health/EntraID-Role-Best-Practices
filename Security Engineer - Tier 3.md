@@ -33,8 +33,6 @@ This is a privileged role. Users with this role have permissions to manage secur
 | Password Protection | Configure custom banned password list or on-premises password protection. |
 | Cross-tenant synchronization | Configure cross-tenant access settings for users in another tenant. Security Administrators can't directly create and delete users, but can indirectly create and delete synchronized users from another tenant when both tenants are configured for cross-tenant synchronization, which is a privileged permission. |
 
-| Actions | Description |
-| --- | --- |
 | `microsoft.directory/applications/policies/update` | Update policies of applications |
 | `microsoft.directory/auditLogs/allProperties/read` | Read all properties on audit logs, excluding custom security attributes audit logs |
 | `microsoft.directory/authorizationPolicy/standard/read` | Read standard properties of authorization policy |
@@ -50,12 +48,6 @@ This is a privileged role. Users with this role have permissions to manage secur
 | `microsoft.directory/crossTenantAccessPolicy/partners/create` | Create cross-tenant access policy for partners |
 | `microsoft.directory/crossTenantAccessPolicy/partners/delete` | Delete cross-tenant access policy for partners |
 | `microsoft.directory/crossTenantAccessPolicy/partners/standard/read` | Read basic properties of cross-tenant access policy for partners |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/basic/update` | Update cross tenant sync policy templates for multi-tenant organization |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/resetToDefaultSettings` | Reset cross tenant sync policy template for multi-tenant organization to default settings |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/standard/read` | Read basic properties of cross tenant sync policy templates for multi-tenant organization |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/basic/update` | Update cross tenant access policy templates for multi-tenant organization |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/resetToDefaultSettings` | Reset cross tenant access policy template for multi-tenant organization to default settings |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/standard/read` | Read basic properties of cross tenant access policy templates for multi-tenant organization |
 | `microsoft.directory/crossTenantAccessPolicy/partners/b2bCollaboration/update` | Update Microsoft Entra B2B collaboration settings of cross-tenant access policy for partners |
 | `microsoft.directory/crossTenantAccessPolicy/partners/b2bDirectConnect/update` | Update Microsoft Entra B2B direct connect settings of cross-tenant access policy for partners |
 | `microsoft.directory/crossTenantAccessPolicy/partners/crossCloudMeetings/update` | Update cross-cloud Teams meeting settings of cross-tenant access policy for partners |
@@ -70,7 +62,14 @@ This is a privileged role. Users with this role have permissions to manage secur
 | `microsoft.directory/domains/federationConfiguration/create` | Create federation configuration for domains |
 | `microsoft.directory/domains/federationConfiguration/delete` |
 
-
+| Actions | Description |
+| --- | --- |
+| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/basic/update` | Update cross tenant sync policy templates for multi-tenant organization |
+| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/resetToDefaultSettings` | Reset cross tenant sync policy template for multi-tenant organization to default settings |
+| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/standard/read` | Read basic properties of cross tenant sync policy templates for multi-tenant organization |
+| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/basic/update` | Update cross tenant access policy templates for multi-tenant organization |
+| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/resetToDefaultSettings` | Reset cross tenant access policy template for multi-tenant organization to default settings |
+| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/standard/read` | Read basic properties of cross tenant access policy templates for multi-tenant organization |
 
 
 			
