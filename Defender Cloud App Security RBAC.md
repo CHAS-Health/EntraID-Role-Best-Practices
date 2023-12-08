@@ -1,11 +1,24 @@
 ### [Back to main page](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/c0a59e10c90151a82f4d2847ea2dcaef311184b1/README.md)
 
-## [Skip to the best practices]()
-
 # Overview
 Defender Cloud App Security (Defender for Cloud, CASB, Defender Cloud App Security, etc) is a module that Microsoft offers which tracks which applications that people are using. This primarily tracks cloud applications, however, it will also give you the ability to uninstall applications on desktops if the cloud app is related to a desktop application. 
 
-# Entra ID Role Access
+# Cloud App Security Best Practices
+
+## Tier 1
+* Security Operator
+This role will be able to view enough information in CASB to do analyst work but does not have the permissions necessary to impact users by sanctioning/unsanctioning applications. If your organization sees fit to allow Tier 1 to do so, then you could add them to Cloud App Security Administrator, but it is not recommended or a best practice.
+
+## Tier 2
+* Cloud App Security Administrator
+This level of access is granted because there is nothing available that is more granular which also allows the user to sanction/unsanction applications. As such, this is the least privilege we can grant the user at this time for this role.
+
+## Tier 3
+* Security Administrator
+This user will already have Security Administrator per the Tier 3 role document. This has full access to CASB. 
+
+
+# Entra ID Default Role Access
 These default Entra ID roles have access to the Defender Cloud App Security portal and its following acctions:
 
 * **Global administrator and Security administrator:** Administrators with Full access have full permissions in Defender for Cloud Apps. They can add admins, add policies and settings, upload logs and perform governance actions, access and manage SIEM agents.
@@ -60,7 +73,6 @@ Below is a matrix that Microsoft graciously provides which shows the permission 
 | Perform OAuth policy actions |      ✔       |       ✔        |                  |                       |                   |                 |              |     ✔     |            ✔             |
 | View manage admin access |      ✔       |       ✔        |        ✔         |           ✔           |         ✔         |        ✔        |      ✔       |           |            ✔             |
 | Manage admins and activity privacy |      ✔       |       ✔        |                  |                       |                   |                 |              |           |            ✔             |
-
 
 
 # Cloud App Security Standalone Roles
@@ -132,18 +144,3 @@ For example, If you assign a user admin permissions to the group "Germany - all 
 	* Governance actions – view only actions related to the relevant Cloud Discovery report
 	* Security recommendations for cloud platforms - No permissions
 	* IP ranges - No permissions
-
-
-# Cloud App Security Best Practices
-
-## Tier 1
-* Security Operator
-This role will be able to view enough information in CASB to do analyst work but does not have the permissions necessary to impact users by sanctioning/unsanctioning applications. If your organization sees fit to allow Tier 1 to do so, then you could add them to Cloud App Security Administrator, but it is not recommended or a best practice.
-
-## Tier 2
-* Cloud App Security Administrator
-This level of access is granted because there is nothing available that is more granular which also allows the user to sanction/unsanction applications. As such, this is the least privilege we can grant the user at this time for this role.
-
-## Tier 3
-* Security Administrator
-This user will already have Security Administrator per the Tier 3 role document. This has full access to CASB. 
