@@ -1,4 +1,4 @@
-### [Back to main page]()
+### [Back to main page](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/c0a59e10c90151a82f4d2847ea2dcaef311184b1/README.md)
 
 ## [Skip to the best practices]()
 
