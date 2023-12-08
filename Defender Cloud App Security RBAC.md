@@ -1,15 +1,124 @@
 ### [Back to main page]()
 
+## [Skip to the best practices]()
 
 # Overview
 Defender Cloud App Security (Defender for Cloud, CASB, Defender Cloud App Security, etc) is a module that Microsoft offers which tracks which applications that people are using. This primarily tracks cloud applications, however, it will also give you the ability to uninstall applications on desktops if the cloud app is related to a desktop application. 
 
-Defender Cloud app Security is now integrated with Microsoft XDR, in the Defender portal. This also includes the implementation of role-based access control (RBAC), although at the time of writing this is not as fleshed out as the other RBAC options that Defender XDR offers.
-
-To get to the Cloud App roles, follow these steps.
-
-1. Navigate to the "Permissions" tab in Defender XDR 
-2. Under "Cloud Apps" (located at the bottom of the list), select "Roles" 
+# Entra ID Role Access
+These default Entra ID roles have access to the Defender Cloud App Security portal and its following acctions:
 
 
 
+# Cloud App Security Standalone Roles
+These roles are part of Cloud App Security's built-in permission roles. This is now located in Defender XDR under the Permissions > Cloud Apps section. These roles can be assigned to individual users when needed, which will overwrite the permissions that they have set in Entra ID. `Note: Global Admin and Security Admin will not be overwritten because they already have full access.`
+
+* Global administrator: Has Full access similar to the Azure AD Global administrator role but only to Defender for Cloud Apps.
+* Compliance administrator: Grants the same permissions as the Azure AD Compliance administrator role but only to Defender for Cloud Apps.
+* Security reader: Grants the same permissions as the Azure AD Security reader role but only to Defender for Cloud Apps.
+* Security operator: Grants the same permissions as the Azure AD Security operator role but only to Defender for Cloud Apps.
+* App/instance admin: Has full or read-only permissions to all of the data in Defender for Cloud Apps that deals exclusively with the specific app or instance of an app selected. For example, you give a user admin permission to your Box European instance. The admin will see only data that relates to the Box European instance, whether it's files, activities, policies, or alerts:
+	* Activities page - Only activities about the specific app
+	* Alerts - Only alerts relating to the specific app. In some cases, alert data related to another app if the data is correlated with the specific app. Visibility to alert data related to another app is limited, and there is no access to drill down for more details
+	* Policies - Can view all policies and if assigned full permissions can edit or create only policies that deal exclusively with the app/instance
+	* Accounts page - Only accounts for the specific app/instance
+	* App permissions - Only permissions for the specific app/instance
+	* Files page - Only files from the specific app/instance
+	* Conditional Access App Control - No permissions
+	* Cloud Discovery activity - No permissions
+	* Security extensions - Only permissions for API token with user permissions
+	* Governance actions - Only for the specific app/instance
+	* Security recommendations for cloud platforms - No permissions
+	* IP ranges - No permissions
+* User group admin: Has full or read-only permissions to all of the data in Defender for Cloud Apps that deals exclusively with the specific groups assigned to them.
+
+For example, If you assign a user admin permissions to the group "Germany - all users", the admin can view and edit information in Defender for Cloud Apps only for that user group. The User group admin has the following access: 
+
+ 	* Activities page - Only activities about the users in the group
+	* Alerts - Only alerts relating to the users in the group. In some cases, alert data related to another user if the data is correlated with the users in the group. Visibility to alert data related to another users is limited, and there is no access to drill down for more details.
+	* Policies - Can view all policies and if assigned full permissions can edit or create only policies that deal exclusively with users in the group
+	* Accounts page - Only accounts for the specific users in the group
+	* App permissions – No permissions
+	* Files page – No permissions
+	* Conditional Access App Control - No permissions
+	* Cloud Discovery activity - No permissions
+	* Security extensions - Only permissions for API token with users in the group
+	* Governance actions - Only for the specific users in the group
+	* Security recommendations for cloud platforms - No permissions
+	* IP ranges - No permissions
+
+* Cloud Discovery global admin: Has permission to view and edit all Cloud Discovery settings and data. The Global Discovery admin has the following access:
+	* Settings
+		* System settings - View only
+		* Cloud Discovery settings - View and edit all (anonymization permissions depend on whether it was allowed during role assignment)
+		* Cloud Discovery activity - full permissions
+	* Alerts - view and manage only alerts related to the relevant Cloud Discovery report
+	* Policies - Can view all policies and can edit or create only Cloud Discovery policies
+	* Activities page - No permissions
+	* Accounts page - No permissions
+	* App permissions – No permissions
+	* Files page – No permissions
+	* Conditional Access App Control - No permissions
+	* Security extensions - Creating and deleting their own API tokens
+	* Governance actions - Only Cloud Discovery related actions
+	* Security recommendations for cloud platforms - No permissions
+	* IP ranges - No permissions
+* Cloud Discovery report admin:
+	* Settings
+		* System settings - View only
+		* Cloud Discovery settings - View all (anonymization permissions depend on whether it was allowed during role assignment)
+		* Cloud Discovery activity - read permissions only
+	* Alerts – view only alerts related to the relevant Cloud Discovery report
+	* Policies - Can view all policies and can create only Cloud Discovery policies, without the possibility to govern application (tagging, sanction and unsanctioned)
+	* Activities page - No permissions
+	* Accounts page - No permissions
+	* App permissions – No permissions
+	* Files page – No permissions
+	* Conditional Access App Control - No permissions
+	* Security extensions - Creating and deleting their own API tokens
+	* Governance actions – view only actions related to the relevant Cloud Discovery report
+	* Security recommendations for cloud platforms - No permissions
+	* IP ranges - No permissions
+
+Below is a matrix that Microsoft graciously provides which shows the permission level access for each role.
+
+| Permissions | Global Admin | Security Admin | Compliance Admin | Compliance Data Admin | Security Operator | Security Reader | Global Reader | PBI Admin | Cloud App Security admin |
+|-------------|:------------:|:--------------:|:----------------:|:---------------------:|:-----------------:|:---------------:|:------------:|:---------:|:------------------------:|
+| Read alerts |      ✔       |       ✔        |        ✔         |           ✔           |         ✔         |        ✔        |      ✔       |     ✔     |            ✔             |
+| Manage alerts |      ✔       |       ✔        |        ✔         |           ✔           |         ✔         |                 |              |     ✔     |            ✔             |
+| Read OAuth applications |      ✔       |       ✔        |        ✔         |           ✔           |         ✔         |        ✔        |      ✔       |     ✔     |            ✔             |
+| Perform OAuth application actions |      ✔       |       ✔        |                  |                       |                   |                 |              |     ✔     |            ✔             |
+| Access discovered apps, the cloud app catalog, and other cloud discovery data |      ✔       |       ✔        |        ✔         |           ✔           |         ✔         |        ✔        |      ✔       |           |            ✔             |
+| Configure API connectors |      ✔       |       ✔        |                  |                       |         ✔         |                 |              |           |            ✔             |
+| Perform cloud discovery actions |      ✔       |       ✔        |                  |                       |                   |                 |              |           |            ✔             |
+| Access files data and file policies |      ✔       |       ✔        |        ✔         |           ✔           |         ✔         |        ✔        |      ✔       |     ✔     |            ✔             |
+| Perform file actions |      ✔       |       ✔        |                  |                       |                   |                 |              |     ✔     |            ✔             |
+| Access governance log |      ✔       |       ✔        |        ✔         |           ✔           |         ✔         |        ✔        |      ✔       |     ✔     |            ✔             |
+| Perform governance log actions |      ✔       |       ✔        |                  |                       |                   |                 |              |     ✔     |            ✔             |
+| Access scoped discovery governance log |      ✔       |       ✔        |                  |                       |                   |                 |              |           |            ✔             |
+| Read policies |      ✔       |       ✔        |        ✔         |           ✔           |         ✔         |        ✔        |      ✔       |     ✔     |            ✔             |
+| Perform all policy actions |      ✔       |       ✔        |                  |                       |                   |                 |              |     ✔     |            ✔             |
+| Perform file policy actions |      ✔       |       ✔        |        ✔         |                       |                   |                 |              |           |            ✔             |
+| Perform OAuth policy actions |      ✔       |       ✔        |                  |                       |                   |                 |              |     ✔     |            ✔             |
+| View manage admin access |      ✔       |       ✔        |        ✔         |           ✔           |         ✔         |        ✔        |      ✔       |           |            ✔             |
+| Manage admins and activity privacy |      ✔       |       ✔        |                  |                       |                   |                 |              |           |            ✔             |
+
+
+
+# Cloud App Security Role Tiers
+
+## Tier 1
+Tier 1 needs the ability to see cloud app usage, but may not need the ability to action on items. Because certain actions such as sanctioning or unsanctioning applications can have a large impact on users, it's best to restrict that to Tier 2 and above. 
+
+### Permissions
+* 
+
+## Tier 2
+
+### Permissions
+
+
+## Tier 3
+
+
+### Permissions
