@@ -134,15 +134,16 @@ For example, If you assign a user admin permissions to the group "Germany - all 
 	* IP ranges - No permissions
 
 
-
-
-# Cloud App Security Role Tiers
+# Cloud App Security Best Practices
 
 ## Tier 1
 * Security Operator
+This role will be able to view enough information in CASB to do analyst work but does not have the permissions necessary to impact users by sanctioning/unsanctioning applications. If your organization sees fit to allow Tier 1 to do so, then you could add them to Cloud App Security Administrator, but it is not recommended or a best practice.
 
 ## Tier 2
-* Cloud App Security Admin
+* Cloud App Security Administrator
+This level of access is granted because there is nothing available that is more granular which also allows the user to sanction/unsanction applications. As such, this is the least privilege we can grant the user at this time for this role.
 
 ## Tier 3
-* Security Admin
+* Security Administrator
+This user will already have Security Administrator per the Tier 3 role document. This has full access to CASB. 
