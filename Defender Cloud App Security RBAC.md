@@ -139,17 +139,10 @@ For example, If you assign a user admin permissions to the group "Germany - all 
 # Cloud App Security Role Tiers
 
 ## Tier 1
-Tier 1 needs the ability to see cloud app usage, but may not need the ability to action on items. Because certain actions such as sanctioning or unsanctioning applications can have a large impact on users, it's best to restrict that to Tier 2 and above. 
-
-### Permissions
-* 
+* Security Operator
 
 ## Tier 2
-
-### Permissions
-
+* Cloud App Security Admin
 
 ## Tier 3
-
-
-### Permissions
+* Security Admin
