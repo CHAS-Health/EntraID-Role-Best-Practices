@@ -42,6 +42,8 @@ _Secure Score (Manage) can be restricted depending on your organization's needs.
 ### Authorization
 * Read and Manage
 
+_Some organizations may opt to restrict Authorization to read-only for Tier 1 analysts, as this could impact rule logic significantly if device groups are heavily utilized._
+
 ### Security Settings
 * Select Custom Permissions
   * Detection Tuning (Manage)
