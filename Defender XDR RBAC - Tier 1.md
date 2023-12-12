@@ -15,7 +15,7 @@ This role is configured under Microsoft Defender XDR's RBAC permissions. The rol
     * File Collection (Manage)
     * Email Quarantine (Manage)
 
-`note:` _Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information._
+_note: Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information._
 
 ### Raw Data (Email and Collaboration)
 * Select Custom Permissions
@@ -23,7 +23,7 @@ This role is configured under Microsoft Defender XDR's RBAC permissions. The rol
   * Email Content (Read)
  
   
-`note:` _Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information._
+__note: Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information._
 
 ## Security Posture
 ### Posture Management
@@ -35,7 +35,7 @@ This role is configured under Microsoft Defender XDR's RBAC permissions. The rol
     * Secure Score (Read)
     * Secure Score (Manage)
 
-`note:` _Secure Score (Manage) can be restricted depending on your organization's needs._
+_note: Secure Score (Manage) can be restricted depending on your organization's needs._
 
 
 ## Authorization and Settings
@@ -47,13 +47,13 @@ This role is configured under Microsoft Defender XDR's RBAC permissions. The rol
   * Detection Tuning (Manage)
   * Core Security Settings (Read)
  
-`note:` _Some organizations may want to restrict detection tuning to a higher role as it can have significant impacts on false negatives._
+_note: Some organizations may want to restrict detection tuning to a higher role as it can have significant impacts on false negatives._
 
 
 ### System Settings
 * Read-only (Defender for Office, Defender for Identity)
 
-`note:` _Granting the ability to see settings may give the analyst a better idea of the infrastructure and how things work. They cannot change anything. Your organization may have different needs._  
+_note: Granting the ability to see settings may give the analyst a better idea of the infrastructure and how things work. They cannot change anything. Your organization may have different needs._  
 
 
 
