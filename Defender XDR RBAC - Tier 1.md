@@ -14,7 +14,7 @@ This role is configured under Microsoft Defender XDR's RBAC permissions. The rol
     * Basic Live Response (Manage)
     * File Collection (Manage)
     * Email Quarantine (Manage)
-    * 
+
 `note:` Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information.
   
 ### Raw Data (Email and Collaboration)
@@ -33,7 +33,7 @@ This role is configured under Microsoft Defender XDR's RBAC permissions. The rol
     * Application Handling (manage)
     * Secure Score (read)
     * Secure Score (manage)
-    * 
+
  `note:` Secure Score (manage) can be restricted depending on your organization's needs.
 
 
