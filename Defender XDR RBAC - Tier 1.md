@@ -1,6 +1,6 @@
 # Microsoft Defender XDR Role-Based Access Control
-### Title: Security Role - Tier 1
-### Tier: One
+Title: **Security Role - Tier 1**
+Tier: **One**
 
 # Permissions
 This role is configured under Microsoft Defender XDR's RBAC permissions. The role will have general analyst capabilities.
@@ -15,26 +15,27 @@ This role is configured under Microsoft Defender XDR's RBAC permissions. The rol
     * File Collection (Manage)
     * Email Quarantine (Manage)
 
-`note:` Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information.
-  
+`note:` _Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information._
+
 ### Raw Data (Email and Collaboration)
 * Select Custom Permissions
   * Email Message Headers (Read)
   * Email Content (Read)
-
-`note:` Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information.
+ 
+  
+`note:` _Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information._
 
 ## Security Posture
 ### Posture Management
 * Select Custom Permissions
-    * Vulnerability Management (read)
-    * Exception Handling (manage)
-    * Remediation Handling (manage)
-    * Application Handling (manage)
-    * Secure Score (read)
-    * Secure Score (manage)
+    * Vulnerability Management (Read)
+    * Exception Handling (Manage)
+    * Remediation Handling (Manage)
+    * Application Handling (Manage)
+    * Secure Score (Read)
+    * Secure Score (Manage)
 
- `note:` Secure Score (manage) can be restricted depending on your organization's needs.
+`note:` _Secure Score (Manage) can be restricted depending on your organization's needs._
 
 
 ## Authorization and Settings
@@ -43,16 +44,16 @@ This role is configured under Microsoft Defender XDR's RBAC permissions. The rol
 
 ### Security Settings
 * Select Custom Permissions
-  * Detection Tuning (manage)
-  * Core Security Settings (read)
+  * Detection Tuning (Manage)
+  * Core Security Settings (Read)
  
-`note:` Some organizations may want to restrict detection tuning to a higher role as it can have significant impacts on false negatives.
+`note:` _Some organizations may want to restrict detection tuning to a higher role as it can have significant impacts on false negatives._
+
 
 ### System Settings
 * Read-only (Defender for Office, Defender for Identity)
 
-`note:` Granting the ability to see settings may give the analyst a better idea of the infrastructure and how things work. They cannot change anything. Your organization may have different needs.
-  
+`note:` _Granting the ability to see settings may give the analyst a better idea of the infrastructure and how things work. They cannot change anything. Your organization may have different needs._  
 
 
 
