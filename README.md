@@ -5,7 +5,7 @@ This is for determining the best practices and assigning least-privilege for all
 ## Defender XDR Roles
 * [Defender XDR - Tier 1](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/18365b5eafc749b4dcb5ba9a9e3a680461920714/Defender%20XDR%20RBAC%20-%20Tier%201.md)
 * [Defender XDR - Tier 2](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/18365b5eafc749b4dcb5ba9a9e3a680461920714/Defender%20XDR%20RBAC%20-%20Tier%202.md)
-* [Defender XDR - Tier 3]()
+* [Defender XDR - Tier 3](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/main/Defender%20XDR%20RBAC%20-%20Tier%203.md)
 
 ## Defender Cloud App Security Roles
 * [Defender Cloud App Security RBAC](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/f982994eb5ade5155249304148a0dcc199288ada/Defender%20Cloud%20App%20Security%20RBAC.md)
