@@ -1,33 +1,34 @@
 # EntraID Role Best Practices
-This is for determining the best practices and assigning least-privilege for all Entra ID and Defender XDR roles.
+This is for determining the best practices and assigning least-privilege for all Entra ID and Defender XDR roles. EntraID is now controlling the majority of permissions in the Microsoft ecosystem. For those items which are not included by EntraID coverage, they may contain documentation on building custom roles such as Defender XDR RBAC, Microsoft Purview, and Cloud App Security. 
 
-# Overview
+All documentation here is based on an average organization structure which would have an entry-level, mid-level, and senior-level analyst/engineer. Each organization is different and this document may not reflect your exact organization structure, so it is important to verify each permission granted for proper access control. Do not blindly apply permissions. 
 
-## Links and Resources
+_Disclaimer: I do not work for microsoft and this information may be incorrect. Always do your own due-dilligence._
+
+# Links and Resources
+This document relies heavily on Microsoft's official documentation. These are the resources that were used to come to the conclusions in this document.
 
 * Microsoft RBAC roles delegated by task - https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/delegate-by-task
    * This document allows you to very easily compare tasks that need to be completed and the associated least privileged role for each task. This will give you a better understanding how the minimum role assignment needed for any given task.
 * Microsoft RBAC Permissions Reference - https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference
    * This document is used as a reference for every default role that Microsoft has created. This is the master document used for determining the full breadth and depth of each role's reach. 
 
-
 # Roles
-
+Each role is separated into its respective portal. EntraID is the main role grant, while Defender XDR RBAC and Cloud App Security are supplementary to EntraID. 
 
 ## Defender XDR 
 
-
-# Microsoft Defender XDR Role-Based Access Control
+### Microsoft Defender XDR Role-Based Access Control - Tier 1
 
 Title: **Security Role - Tier 1**
 
 Tier: **One**
 
-# Permissions
+#### Permissions
 This role is configured under Microsoft Defender XDR's RBAC permissions. The role will have general analyst capabilities.
 
-## Security Operations
-### Security Data
+##### Security Operations
+###### Security Data
 * Select Custom Permissions
     * ✓ Security Data Basics (Read)
     * ✓ Alerts (Manage)
@@ -38,15 +39,15 @@ This role is configured under Microsoft Defender XDR's RBAC permissions. The rol
 
 _Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information._
 
-### Raw Data (Email and Collaboration)
+##### Raw Data (Email and Collaboration)
 * Select Custom Permissions
   * ✓ Email Message Headers (Read)
   * ✓ Email Content (Read)
  
 _Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information._
 
-## Security Posture
-### Posture Management
+#### Security Posture
+##### Posture Management
 * Select Custom Permissions
     * ✓ Vulnerability Management (Read)
     * ✓ Exception Handling (Manage)
@@ -58,13 +59,13 @@ _Email message permissions are entirely dependent on your organization's philoso
 _Secure Score (Manage) can be restricted depending on your organization's needs._
 
 
-## Authorization and Settings
-### Authorization
+#### Authorization and Settings
+##### Authorization
 * ✓ Read and Manage
 
 _Some organizations may opt to restrict Authorization to read-only for Tier 1 analysts, as this could impact rule logic significantly if device groups are heavily utilized._
 
-### Security Settings
+##### Security Settings
 * Select Custom Permissions
   * ✓ Detection Tuning (Manage)
   * ✓ Core Security Settings (Read)
@@ -72,25 +73,23 @@ _Some organizations may opt to restrict Authorization to read-only for Tier 1 an
 _Some organizations may want to restrict detection tuning to a higher role as it can have significant impacts on false negatives._
 
 
-### System Settings
+##### System Settings
 * ✓ Read-only (Defender for Office, Defender for Identity)
 
 _Granting the ability to see settings may give the analyst a better idea of the infrastructure and how things work. They cannot change anything. Your organization may have different needs._  
 
 
-
-
-# Microsoft Defender XDR Role-Based Access Control
+### Microsoft Defender XDR Role-Based Access Control - Tier 2
 
 Title: **Security Role - Tier 2**
 
 Tier: **Two**
 
-# Permissions
+### Permissions
 This role is configured under Microsoft Defender XDR's RBAC permissions. The role will have more manage permissions than tier 1 does but is not able to change many settings.
 
-## Security Operations
-### Security Data
+#### Security Operations
+##### Security Data
 * Select Custom Permissions
     * ✓ Security Data Basics (Read)
     * ✓ Alerts (Manage)
@@ -103,15 +102,15 @@ This role is configured under Microsoft Defender XDR's RBAC permissions. The rol
 
 _Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information._
 
-### Raw Data (Email and Collaboration)
+##### Raw Data (Email and Collaboration)
 * Select Custom Permissions
   * ✓ Email Message Headers (Read)
   * ✓ Email Content (Read)
  
 _Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information._
 
-## Security Posture
-### Posture Management
+#### Security Posture
+##### Posture Management
 * Select Custom Permissions
     * ✓ Vulnerability Management (Read)
     * ✓ Exception Handling (Manage)
@@ -124,13 +123,13 @@ _Email message permissions are entirely dependent on your organization's philoso
 _Secure Score (Manage) can be restricted depending on your organization's needs._
 
 
-## Authorization and Settings
-### Authorization
+#### Authorization and Settings
+##### Authorization
 * ✓ Read and Manage
 
 _Some organizations may opt to restrict Authorization to read-only for Tier 1 analysts, as this could impact rule logic significantly if device groups are heavily utilized._
 
-### Security Settings
+##### Security Settings
 * Select Custom Permissions
   * ✓ Detection Tuning (Manage)
   * ✓ Core Security Settings (Read)
@@ -139,28 +138,28 @@ _Some organizations may opt to restrict Authorization to read-only for Tier 1 an
 _Some organizations may want to restrict detection tuning to a higher role as it can have significant impacts on false negatives._
 
 
-### System Settings
+##### System Settings
 * ✓ Read-only (Defender for Office, Defender for Identity)
 
 _Granting the ability to see settings may give the analyst a better idea of the infrastructure and how things work. They cannot change anything. Your organization may have different needs._  
 
 
 
-# Microsoft Defender XDR Role-Based Access Control
+### Microsoft Defender XDR Role-Based Access Control - Tier 3
 
 Title: **Security Role - Tier 3**
 
 Tier: **Three**
 
-# Permissions
+### Permissions
 This role is configured under Microsoft Defender XDR's RBAC permissions. This role is used by senior/tier 3 analysts and engineers and has permission to do most everything in the Defender XDR platform.
 
 **Note: Selecting "All read and manage permissions" at the top of the page will blank out all other permissions and assign them all. Below I have listed all of the permissions granted for tracking purposes.**
 
 ![image](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/assets/8816079/bac071b3-d766-42cc-b12e-452161c24229)
 
-## Security Operations
-### Security Data
+#### Security Operations
+##### Security Data
 * All read and manage permissions
     * ✓ Security Data Basics (Read)
     * ✓ Alerts (Manage)
@@ -171,14 +170,14 @@ This role is configured under Microsoft Defender XDR's RBAC permissions. This ro
     * ✓ Email Quarantine (Manage)
     * ✓ Email Advanced Actions (Manage)
 
-### Raw Data (Email and Collaboration)
+##### Raw Data (Email and Collaboration)
   * ✓ Email Message Headers (Read)
   * ✓ Email Content (Read)
  
 _Email message permissions are entirely dependent on your organization's philosophy, structure, and job descriptions. Some organizations may not want your junior analysts to be able to read email information._
 
-## Security Posture
-### Posture Management
+#### Security Posture
+##### Posture Management
 * All read and manage permissions
     * ✓ Vulnerability Management (Read)
     * ✓ Exception Handling (Manage)
@@ -188,29 +187,24 @@ _Email message permissions are entirely dependent on your organization's philoso
     * ✓ Secure Score (Read)
     * ✓ Secure Score (Manage)
 
-## Authorization and Settings
-### Authorization
+#### Authorization and Settings
+##### Authorization
 * ✓ Read and Manage
 
 _Some organizations may opt to restrict Authorization to read-only for Tier 1 analysts, as this could impact rule logic significantly if device groups are heavily utilized._
 
-### Security Settings
+##### Security Settings
 * All read and manage permissions
   * ✓ Detection Tuning (Manage)
   * ✓ Core Security Settings (Read)
   * ✓ Core Security Settings (Manage)
  
-
-### System Settings
+##### System Settings
 * ✓ Read and Manage
-
-
 
 ## Entra ID
 
-#### [Back to main page](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/tree/main#entraid-role-best-practices)
-
-# Security Engineer - Tier 1
+### Security Engineer - Tier 1
 Purpose: This role is the general analyst for the organization. They are in the trenches every day and frequently need to see deep into the logs to triage events. This role is going to be the least permissive Security Engineer position, but that role also comes with greater permissions overall than similar engineer positions.
 
 ## Defender XDR Role-Based Access Control (RBAC)
@@ -220,7 +214,7 @@ Defender XDR now has its own set of permissions which can be created and assigne
 
 This is a custom role that will need to be created. See the documentation [here](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/450ce6398ac84948c0db2e6ab5ede2129627c64c/Defender%20XDR%20RBAC%20-%20Tier%201.md) for a full guide, or click the header. 
 
-## Microsoft Entra ID Role Assignments
+## Role Assignments
 * Attack Payload Author
 * Authentication Administrator 
 * Cloud Device Administrator
@@ -237,7 +231,6 @@ Users in this role can create attack payloads but not actually launch or schedul
 | --- | --- |
 | `microsoft.office365.protectionCenter/attackSimulator/payload/allProperties/allTasks` | Create and manage attack payloads in Attack Simulator |
 | `microsoft.office365.protectionCenter/attackSimulator/reports/allProperties/read` | Create and manage attack payloads in Attack Simulator |
-
 
 ### Authentication Administrator - Privileged
 This role allows users to reset authentication settings such as password, change MFA authentication type, clear saved authentication credentials, revoke sign-ins, and more. This role specifically prevents the admin from resetting admin authentication. 
@@ -286,8 +279,7 @@ This is a privileged role. Users in this role can enable, disable, and delete de
 | `microsoft.azure.serviceHealth/allEntities/allTasks` | Read and configure Azure Service Health |
 | `microsoft.office365.serviceHealth/allEntities/allTasks` | Read and configure Service Health in the Microsoft 365 admin center |
 
-
-### Message Center Reader
+##### Message Center Reader
 Users in this role can monitor notifications and advisory health updates in Message center for their organization on configured services such as Exchange, Intune, and Microsoft Teams. Message Center Readers receive weekly email digests of posts, updates, and can share 		message center posts in Microsoft 365. In Microsoft Entra ID, users assigned to this role will only have read-only access on Microsoft Entra services such as users and groups. This role has no access to view, create, or manage support tickets.
 
 | Permission | Description |
@@ -295,8 +287,7 @@ Users in this role can monitor notifications and advisory health updates in Mess
 | `microsoft.office365.messageCenter/messages/read` | Read messages in Message Center in the Microsoft 365 admin center, excluding security messages |
 | `microsoft.office365.webPortal/allEntities/standard/read` | Read basic properties on all resources in the Microsoft 365 admin center |
 
-
-### Security Reader - Privileged
+##### Security Reader - Privileged
 This is a privileged role. Users with this role have global read-only access on security-related feature, including all information in Microsoft 365 Defender portal, Microsoft Entra ID Protection, Privileged Identity Management, as well as the ability to read Microsoft 		Entra sign-in reports and audit logs, and in Microsoft Purview compliance portal. For more information about Office 365 permissions, see Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview compliance.
 
 | Permission | Description |
@@ -338,7 +329,7 @@ This is a privileged role. Users with this role have global read-only access on 
 | `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/standard/read` | Read basic properties of cross tenant access policy templates for multi-tenant organization |
 
 
-### Service Support Administrator
+##### Service Support Administrator
 Users with this role can create and manage support requests with Microsoft for Azure and Microsoft 365 services, and view the service dashboard and message center in the Azure portal and Microsoft 365 admin center.
 
 | Permission | Description |
@@ -350,23 +341,10 @@ Users with this role can create and manage support requests with Microsoft for A
 | `microsoft.office365.supportTickets/allEntities/allTasks` | Create and manage Microsoft 365 service requests |
 | `microsoft.office365.webPortal/allEntities/standard/read` | Read basic properties on all resources in the Microsoft 365 admin center |
 
-
-
-#### [Back to main page](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/tree/main#entraid-role-best-practices)
-
-# Security Engineer - Tier 2
-### Title: Security Engineer 2
-### Tier: Two
+### Security Engineer - Tier 2
+Title: Security Engineer 2
+Tier: Two
 Purpose: This role is specifically intended to be used by the level two engineer. In most mid-sized organizations, this is what is classified as your mid to senior level position and will have permissions to do most things. That being said, it is not a global admin nor does it have tenant level permissions.
-
-# Defender XDR Role-Based Access Control (RBAC)
-Defender XDR now has its own set of permissions which can be created and assigned to the Defender XDR suite of tools, with more on the way. It is best-practice to utilize Defender XDR RBAC for controlling Microsoft Defender XDR permissions to things like Defender ATP, Defender for Endpoint, Defender Cloud App Security, Defender for Identity, and more. This gives you the most granular control over these modules, and is far superior to the default Azure Entra ID Roles.
-
-## [ Defender XDR RBAC - Tier 2](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/72bca25e4d728d8dba2ce5c4d7e2d44a97098b56/Defender%20XDR%20RBAC%20-%20Tier%202.md)
-
-
-This is a custom role that will need to be created. See the documentation [here](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/72bca25e4d728d8dba2ce5c4d7e2d44a97098b56/Defender%20XDR%20RBAC%20-%20Tier%202.md) for a full guide, or click the header. 
-
 
 # Microsoft Entra ID Role Assignments
 
@@ -506,105 +484,23 @@ Users with this role can create and manage support requests with Microsoft for A
 
 
 			
-#### [Back to main page](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/tree/main#entraid-role-best-practices)
 
-# Security Engineer - Tier 3
-### Title: Security Engineer 3
-### Tier: Three
-Purpose: This is the top level engineering position per the design outlined. This grants most admin actions on security tasks in the tenant while also allowing for JIT access for critical actions. 
+## Cloud App Security Best Practices
 
-# Defender XDR Role-Based Access Control (RBAC)
-Defender XDR now has its own set of permissions which can be created and assigned to the Defender XDR suite of tools, with more on the way. It is best-practice to utilize Defender XDR RBAC for controlling Microsoft Defender XDR permissions to things like Defender ATP, Defender for Endpoint, Defender Cloud App Security, Defender for Identity, and more. This gives you the most granular control over these modules, and is far superior to the default Azure Entra ID Roles.
-
-## [ Defender XDR RBAC - Tier 3](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/72bca25e4d728d8dba2ce5c4d7e2d44a97098b56/Defender%20XDR%20RBAC%20-%20Tier%203.md)
-
-This is a custom role that will need to be created. See the documentation [here](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/72bca25e4d728d8dba2ce5c4d7e2d44a97098b56/Defender%20XDR%20RBAC%20-%20Tier%202.md) for a full guide, or click the header. 
-
-
-# Microsoft Entra ID Default Role Assignments
-
-## Security Administrator
-This is a privileged role. Users with this role have permissions to manage security-related features in the Microsoft 365 Defender portal, Microsoft Entra ID Protection, Microsoft Entra Authentication, Azure Information Protection, and Microsoft Purview compliance portal. For more information about Office 365 permissions, see Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview compliance.
-
-| In | Can do |
-| --- | --- |
-| Microsoft 365 Defender portal | Monitor security-related policies across Microsoft 365 services<br>Manage security threats and alerts<br>View reports |
-| Identity Protection | All permissions of the Security Reader role<br>Perform all Identity Protection operations except for resetting passwords |
-| Privileged Identity Management | All permissions of the Security Reader role<br>Cannot manage Microsoft Entra role assignments or settings |
-| Microsoft Purview compliance portal | Manage security policies<br>View, investigate, and respond to security threats<br>View reports |
-| Azure Advanced Threat Protection | Monitor and respond to suspicious security activity |
-| Microsoft Defender for Endpoint | Assign roles<br>Manage machine groups<br>Configure endpoint threat detection and automated remediation<br>View, investigate, and respond to alerts<br>View machines/device inventory |
-| Intune | Views user, device, enrollment, configuration, and application information<br>Cannot make changes to Intune |
-| Microsoft Defender for Cloud Apps | Add admins, add policies and settings, upload logs and perform governance actions |
-| Microsoft 365 service health | View the health of Microsoft 365 services |
-| Smart lockout | Define the threshold and duration for lockouts when failed sign-in events happen. |
-| Password Protection | Configure custom banned password list or on-premises password protection. |
-| Cross-tenant synchronization | Configure cross-tenant access settings for users in another tenant. Security Administrators can't directly create and delete users, but can indirectly create and delete synchronized users from another tenant when both tenants are configured for cross-tenant synchronization, which is a privileged permission. |
-
-| `microsoft.directory/applications/policies/update` | Update policies of applications |
-| `microsoft.directory/auditLogs/allProperties/read` | Read all properties on audit logs, excluding custom security attributes audit logs |
-| `microsoft.directory/authorizationPolicy/standard/read` | Read standard properties of authorization policy |
-| `microsoft.directory/bitlockerKeys/key/read` | Read bitlocker metadata and key on devices |
-| `microsoft.directory/crossTenantAccessPolicy/standard/read` | Read basic properties of cross-tenant access policy |
-| `microsoft.directory/crossTenantAccessPolicy/allowedCloudEndpoints/update` | Update allowed cloud endpoints of cross-tenant access policy |
-| `microsoft.directory/crossTenantAccessPolicy/basic/update` | Update basic settings of cross-tenant access policy |
-| `microsoft.directory/crossTenantAccessPolicy/default/standard/read` | Read basic properties of the default cross-tenant access policy |
-| `microsoft.directory/crossTenantAccessPolicy/default/b2bCollaboration/update` | Update Microsoft Entra B2B collaboration settings of the default cross-tenant access policy |
-| `microsoft.directory/crossTenantAccessPolicy/default/b2bDirectConnect/update` | Update Microsoft Entra B2B direct connect settings of the default cross-tenant access policy |
-| `microsoft.directory/crossTenantAccessPolicy/default/crossCloudMeetings/update` | Update cross-cloud Teams meeting settings of the default cross-tenant access policy |
-| `microsoft.directory/crossTenantAccessPolicy/default/tenantRestrictions/update` | Update tenant restrictions of the default cross-tenant access policy |
-| `microsoft.directory/crossTenantAccessPolicy/partners/create` | Create cross-tenant access policy for partners |
-| `microsoft.directory/crossTenantAccessPolicy/partners/delete` | Delete cross-tenant access policy for partners |
-| `microsoft.directory/crossTenantAccessPolicy/partners/standard/read` | Read basic properties of cross-tenant access policy for partners |
-| `microsoft.directory/crossTenantAccessPolicy/partners/b2bCollaboration/update` | Update Microsoft Entra B2B collaboration settings of cross-tenant access policy for partners |
-| `microsoft.directory/crossTenantAccessPolicy/partners/b2bDirectConnect/update` | Update Microsoft Entra B2B direct connect settings of cross-tenant access policy for partners |
-| `microsoft.directory/crossTenantAccessPolicy/partners/crossCloudMeetings/update` | Update cross-cloud Teams meeting settings of cross-tenant access policy for partners |
-| `microsoft.directory/crossTenantAccessPolicy/partners/tenantRestrictions/update` | Update tenant restrictions of cross-tenant access policy for partners |
-| `microsoft.directory/crossTenantAccessPolicy/partners/identitySynchronization/create` | Create cross-tenant sync policy for partners |
-| `microsoft.directory/crossTenantAccessPolicy/partners/identitySynchronization/basic/update` | Update basic settings of cross-tenant sync policy |
-| `microsoft.directory/crossTenantAccessPolicy/partners/identitySynchronization/standard/read` | Read basic properties of cross-tenant sync policy |
-| `microsoft.directory/deviceLocalCredentials/standard/read` | Read all properties of the backed up local administrator account credentials for Microsoft Entra joined devices, except the password |
-| `microsoft.directory/domains/federation/update` | Update federation property of domains |
-| `microsoft.directory/domains/federationConfiguration/standard/read` | Read standard properties of federation configuration for domains |
-| `microsoft.directory/domains/federationConfiguration/basic/update` | Update basic federation configuration for domains |
-| `microsoft.directory/domains/federationConfiguration/create` | Create federation configuration for domains |
-| `microsoft.directory/domains/federationConfiguration/delete` |
-
-| Actions | Description |
-| --- | --- |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/basic/update` | Update cross tenant sync policy templates for multi-tenant organization |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/resetToDefaultSettings` | Reset cross tenant sync policy template for multi-tenant organization to default settings |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationIdentitySynchronization/standard/read` | Read basic properties of cross tenant sync policy templates for multi-tenant organization |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/basic/update` | Update cross tenant access policy templates for multi-tenant organization |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/resetToDefaultSettings` | Reset cross tenant access policy template for multi-tenant organization to default settings |
-| `microsoft.directory/crossTenantAccessPolicy/partners/templates/multiTenantOrganizationPartnerConfiguration/standard/read` | Read basic properties of cross tenant access policy templates for multi-tenant organization |
-
-
-			
-
-			
-
-
-## Cloud App Security
-### [Back to main page](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/c0a59e10c90151a82f4d2847ea2dcaef311184b1/README.md)
-
-# Overview
+### Overview
 Defender Cloud App Security (Defender for Cloud, CASB, Defender Cloud App Security, etc) is a module that Microsoft offers which tracks which applications that people are using. This primarily tracks cloud applications, however, it will also give you the ability to uninstall applications on desktops if the cloud app is related to a desktop application. 
 
-# Cloud App Security Best Practices
-
-## Tier 1
+#### Tier 1
 * Security Operator
 This role will be able to view enough information in CASB to do analyst work but does not have the permissions necessary to impact users by sanctioning/unsanctioning applications. If your organization sees fit to allow Tier 1 to do so, then you could add them to Cloud App Security Administrator, but it is not recommended or a best practice.
 
-## Tier 2
+#### Tier 2
 * Cloud App Security Administrator
 This level of access is granted because there is nothing available that is more granular which also allows the user to sanction/unsanction applications. As such, this is the least privilege we can grant the user at this time for this role.
 
-## Tier 3
+#### Tier 3
 * Security Administrator
 This user will already have Security Administrator per the Tier 3 role document. This has full access to CASB. 
-
 
 # Entra ID Default Role Access
 These default Entra ID roles have access to the Defender Cloud App Security portal and its following acctions:
