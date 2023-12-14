@@ -290,13 +290,11 @@ Users with this role can create and manage support requests with Microsoft for A
 | `microsoft.office365.webPortal/allEntities/standard/read` | Read basic properties on all resources in the Microsoft 365 admin center | 
 
 
-## Defender XDR 
+## Defender XDR Role-Based Access Control
 
 ### Microsoft Defender XDR Role-Based Access Control - Tier 1
-
-Title: **Security Role - Tier 1**
-
-Tier: **One**
+Title: Security Role - Tier 1
+Tier: One
 
 #### Permissions
 This role is configured under Microsoft Defender XDR's RBAC permissions. The role will have general analyst capabilities.
@@ -354,10 +352,8 @@ _Granting the ability to see settings may give the analyst a better idea of the 
 
 
 ### Microsoft Defender XDR Role-Based Access Control - Tier 2
-
-Title: **Security Role - Tier 2**
-
-Tier: **Two**
+Title: Security Role - Tier 2
+Tier: Two
 
 ### Permissions
 This role is configured under Microsoft Defender XDR's RBAC permissions. The role will have more manage permissions than tier 1 does but is not able to change many settings.
@@ -420,10 +416,8 @@ _Granting the ability to see settings may give the analyst a better idea of the 
 
 
 ### Microsoft Defender XDR Role-Based Access Control - Tier 3
-
-Title: **Security Role - Tier 3**
-
-Tier: **Three**
+Title: Security Role - Tier 3
+Tier: Three
 
 ### Permissions
 This role is configured under Microsoft Defender XDR's RBAC permissions. This role is used by senior/tier 3 analysts and engineers and has permission to do most everything in the Defender XDR platform.
