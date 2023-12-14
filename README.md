@@ -18,17 +18,10 @@ Each role is separated into its respective portal. EntraID is the main role gran
 
 ## Entra ID
 
-### Security Engineer - Tier 1
+### Security Engineer - Tier 1 - Custom Role
 Purpose: This role is the general analyst for the organization. They are in the trenches every day and frequently need to see deep into the logs to triage events. This role is going to be the least permissive Security Engineer position, but that role also comes with greater permissions overall than similar engineer positions.
 
-## Defender XDR Role-Based Access Control (RBAC)
-Defender XDR now has its own set of permissions which can be created and assigned to the Defender XDR suite of tools, with more on the way. It is best-practice to utilize Defender XDR RBAC for controlling Microsoft Defender XDR permissions to things like Defender ATP, Defender for Endpoint, Defender Cloud App Security, Defender for Identity, and more. This gives you the most granular control over these modules, and is far superior to the default Azure Entra ID Roles.
-
-### [ Defender XDR RBAC - Tier 1](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/450ce6398ac84948c0db2e6ab5ede2129627c64c/Defender%20XDR%20RBAC%20-%20Tier%201.md)
-
-This is a custom role that will need to be created. See the documentation [here](https://github.com/CHAS-Health/EntraID-Role-Best-Practices/blob/450ce6398ac84948c0db2e6ab5ede2129627c64c/Defender%20XDR%20RBAC%20-%20Tier%201.md) for a full guide, or click the header. 
-
-## Role Assignments
+#### Role Assignments
 * Attack Payload Author
 * Authentication Administrator 
 * Cloud Device Administrator
@@ -36,9 +29,9 @@ This is a custom role that will need to be created. See the documentation [here]
 * Security Reader
 * Service Support Administrator
 
-## Permission Details
+#### Permission Details
 
-### Attack Payload author
+##### Attack Payload author
 Users in this role can create attack payloads but not actually launch or schedule them. Attack payloads are then available to all administrators in the tenant who can use them to create a simulation.
 
 | Permission | Description |
@@ -46,7 +39,7 @@ Users in this role can create attack payloads but not actually launch or schedul
 | `microsoft.office365.protectionCenter/attackSimulator/payload/allProperties/allTasks` | Create and manage attack payloads in Attack Simulator |
 | `microsoft.office365.protectionCenter/attackSimulator/reports/allProperties/read` | Create and manage attack payloads in Attack Simulator |
 
-### Authentication Administrator - Privileged
+##### Authentication Administrator - Privileged
 This role allows users to reset authentication settings such as password, change MFA authentication type, clear saved authentication credentials, revoke sign-ins, and more. This role specifically prevents the admin from resetting admin authentication. 
 
 | Permission | Description |
@@ -71,7 +64,7 @@ This role allows users to reset authentication settings such as password, change
 | `microsoft.office365.supportTickets/allEntities/allTasks` | Create and manage Microsoft 365 service requests |
 | `microsoft.office365.webPortal/allEntities/standard/read` | Read basic properties on all resources in the Microsoft 365 admin center |
 
-### Cloud Device Administrator
+##### Cloud Device Administrator
 This is a privileged role. Users in this role can enable, disable, and delete devices in Microsoft Entra ID and read Windows 10 BitLocker keys (if present) in the Azure portal. The role does not grant permissions to manage any other properties on the device.
 
 | Permission | Description |
@@ -160,9 +153,9 @@ Title: Security Engineer 2
 Tier: Two
 Purpose: This role is specifically intended to be used by the level two engineer. In most mid-sized organizations, this is what is classified as your mid to senior level position and will have permissions to do most things. That being said, it is not a global admin nor does it have tenant level permissions.
 
-# Microsoft Entra ID Role Assignments
+#### Microsoft Entra ID Role Assignments
 
-## Attack Simulation Administrator
+##### Attack Simulation Administrator
 Users in this role can create and manage all aspects of attack simulation creation, launch/scheduling of a simulation, and the review of simulation results. Members of this role have this access for all simulations in the tenant.
 
 | Permission | Description |
@@ -172,7 +165,7 @@ Users in this role can create and manage all aspects of attack simulation creati
 | `microsoft.office365.protectionCenter/attackSimulator/simulation/allProperties/allTasks` | Create and manage attack simulation templates in Attack Simulator |
 
 	
-## Authentication Administrator - Privileged
+##### Authentication Administrator - Privileged
 This role allows users to reset authentication settings such as password, change MFA authentication type, clear saved authentication credentials, revoke sign-ins, and more. This role specifically prevents the admin from resetting admin authentication. 
 | Permission | Description |
 | --- | --- |
@@ -196,10 +189,10 @@ This role allows users to reset authentication settings such as password, change
 | `microsoft.office365.supportTickets/allEntities/allTasks` | Create and manage Microsoft 365 service requests |
 | `microsoft.office365.webPortal/allEntities/standard/read` | Read basic properties on all resources in the Microsoft 365 admin center |
 
-## Cloud Device Administrator
+##### Cloud Device Administrator
 This is a privileged role. Users in this role can enable, disable, and delete devices in Microsoft Entra ID and read Windows 10 BitLocker keys (if present) in the Azure portal. The role does not grant permissions to manage any other properties on the device.
 
-##Intune Administrator
+##### Intune Administrator
 This is a privileged role. Users with this role have global permissions within Microsoft Intune Online, when the service is present. Additionally, this role contains the ability to manage users and devices in order to associate policy, as well as create and manage groups. For more information, see Role-based administration control (RBAC) with Microsoft Intune.
 
 This role can create and manage all security groups. However, Intune Administrator does not have admin rights over Office groups. That means the admin cannot update owners or memberships of all Office groups in the organization. However, he/she can manage the Office group that he creates which comes as a part of his/her end-user privileges. So, any Office group (not security group) that he/she creates should be counted against his/her quota of 250.
@@ -245,7 +238,7 @@ This role can create and manage all security groups. However, Intune Administrat
 | `microsoft.office365.supportTickets/allEntities/allTasks` | Create and manage Microsoft 365 service requests |
 | `microsoft.office365.webPortal/allEntities/standard/read` | Read basic properties on all resources in the Microsoft 365 admin center |
 
-## Message Center Privacy Reader
+##### Message Center Privacy Reader
 Users in this role can monitor all notifications in the Message Center, including data privacy messages. Message Center Privacy Readers get email notifications including those related to data privacy and they can unsubscribe using Message Center Preferences. Only the Global Administrator and the Message Center Privacy Reader can read data privacy messages. Additionally, this role contains the ability to view groups, domains, and subscriptions. This role has no permission to view, create, or manage service requests.
 
 | Permission | Description |
@@ -254,7 +247,7 @@ Users in this role can monitor all notifications in the Message Center, includin
 | `microsoft.office365.messageCenter/securityMessages/read` | Read security messages in Message Center in the Microsoft 365 admin center
 | `microsoft.office365.webPortal/allEntities/standard/read` | Read basic properties on all resources in the Microsoft 365 admin center 
 
-## Security Operator - Privileged
+##### Security Operator - Privileged
 This is a privileged role. Users with this role can manage alerts and have global read-only access on security-related features, including all information in Microsoft 365 Defender portal, Microsoft Entra ID Protection, Privileged Identity Management and Microsoft Purview compliance portal. For more information about Office 365 permissions, see Roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview compliance.
 
 | In | Can do |
@@ -285,7 +278,7 @@ This is a privileged role. Users with this role can manage alerts and have globa
 | `microsoft.windows.defenderAdvancedThreatProtection/allEntities/allTasks` | Manage all aspects of Microsoft Defender for Endpoint |
 
 
-## Service Support Administrator
+##### Service Support Administrator
 Users with this role can create and manage support requests with Microsoft for Azure and Microsoft 365 services, and view the service dashboard and message center in the Azure portal and Microsoft 365 admin center.
 | Permission | Description |
 | --- | --- |
